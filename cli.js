@@ -12,7 +12,7 @@
 const command = process.argv[2];
 
 // The array of members that you defined in the previous task
-const members = require("./members");
+const names = require("./names");
 
 if (command === "list") {
   runListCommand();
@@ -21,6 +21,9 @@ if (command === "list") {
 }
 
 function runListCommand() {
+  for(let i = 0; i < names.length; i++) {
+  console.log(`${names[i].firstName} ${names[i].lastName}`);
+  }
   // Replace this with your implementation
   console.log("Called the list command");
 }
